@@ -59,16 +59,22 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
- //Calculate product
- let sum = a + b + c; //Add numbers
- let product = a * b * c; //Multiply numbers
+ //Calculate the sum
+ let firstNum = sum(a,b)[0];
+ let totalSum = sum(firstNum,c);
+ let splitSum = totalSum[0];
+ let str1=`${a} and ${b} and ${c} sum to ${splitSum}.`;
+ 
+ //Calculate the product
+ let firstInt = multiply(a,b)[0];
+ let totalProduct = multiply(firstInt,c);
+ let splitProduct = totalProduct[0];
+ let str2=`The product of ${a} and ${b} and ${c} is ${splitProduct}.`;
 
- let str1 =`${a} and ${b} and ${c} sum to ${sum}.`;
- let str2 =`The product of ${a} and ${b} and ${c} is ${product}.`;
- console.log(str1);
-  console.log(str2);
+; 
 
- return [sum,product,str1,str2];
+return [splitSum,splitProduct,str1,str2];
+
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
